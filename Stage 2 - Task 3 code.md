@@ -1,0 +1,251 @@
+﻿library(gplots)
+
+url <- "https://raw.githubusercontent.com/HackBio-Internship/public\_datasets/main/Cancer2024/glioblastoma.csv"
+
+gene\_data <- read.csv(url, row.names = 1)
+
+\# show first few rows
+
+head(gene\_data)
+
+\# view data
+
+\# View(gene\_data)
+
+\# generate heatmap
+
+heatmap.2(as.matrix(gene\_data), trace = 'none')
+
+\# scaling
+
+heatmap.2(as.matrix(gene\_data), trace = 'none', 
+
+`          `scale='row', dendrogram = 'col', 
+
+`          `Colv = TRUE, Rowv = FALSE)
+
+\# adding colors (diverging colour palettes)
+
+heatmap.2(as.matrix(gene\_data), trace = 'none', 
+
+`          `scale='row', dendrogram = 'col', 
+
+`          `Colv = TRUE, Rowv = FALSE,
+
+`          `col=hcl.colors(100, palette = 'blue-red'))
+
+
+\# adding colors (sequential colour palettes)
+
+heatmap.2(as.matrix(gene\_data), trace = 'none', 
+
+`          `scale='row', dendrogram = 'col', 
+
+`          `Colv = TRUE, Rowv = FALSE,
+
+`          `col=hcl.colors(100, palette = 'green-yellow'))
+
+\# getting column names
+
+colnames(gene\_data)
+
+
+\# selecting groups by index positions
+
+group1 <- c(1,2,3,4,5)
+
+group2 <- c(6,7,8,9,10)
+
+\# get groups 1 & 2 data
+
+group1\_data <- gene\_data[, group1]
+
+group2\_data <- gene\_data[, group2]
+
+\# get means
+
+group1\_mean <- rowMeans(group1\_data)
+
+group2\_mean <- rowMeans(group2\_data)
+
+\# get fold change
+
+fold\_change <- log2(group2\_mean) - log2(group1\_mean)
+
+fold\_change
+
+\# Calculate p-values for each gene
+
+pvalues <- apply(gene\_data, 1, function(row) {
+
+`  `t.test(row[1:5], row[6:10])$p.value
+
+})
+
+\# Calculate fold change
+
+group1\_mean <- rowMeans(gene\_data[, 1:5])
+
+group2\_mean <- rowMeans(gene\_data[, 6:10])
+
+fold\_change <- log2(group2\_mean) - log2(group1\_mean)
+
+\# visualise the fold change and negative log of pvalues
+
+plot(fold\_change, -log10(pvalues))
+
+\# Set cut-offs
+
+fold\_change\_cutoff\_up <- log2(1.5)
+
+fold\_change\_cutoff\_down <- log2(0.67)
+
+pvalue\_cutoff <- 0.05
+
+
+
+head(pvalues)
+
+\# Subset upregulated genes
+
+upregulated\_genes <- gene\_data[fold\_change > fold\_change\_cutoff\_up & pvalues < pvalue\_cutoff, ]
+
+\# Subset downregulated genes
+
+downregulated\_genes <- gene\_data[fold\_change < fold\_change\_cutoff\_down & pvalues < pvalue\_cutoff, ]
+
+\# Output the number of upregulated and downregulated genes
+
+cat("Number of upregulated genes: ", nrow(upregulated\_genes), "\n")
+
+cat("Number of downregulated genes: ", nrow(downregulated\_genes), "\n")
+
+\# View the subsets
+
+head(upregulated\_genes)
+
+head(downregulated\_genes)
+
+\# Visualize upregulated and downregulated genes
+
+plot(fold\_change, -log10(pvalues), col = ifelse(fold\_change > fold\_change\_cutoff\_up & pvalues < pvalue\_cutoff, 'red', 
+
+`                                                `ifelse(fold\_change < fold\_change\_cutoff\_down & pvalues < pvalue\_cutoff, 'blue', 'gray')),
+
+`     `xlab = "Fold Change", ylab = "-log10(P-values)")
+
+legend("topright", legend = c("Upregulated", "Downregulated", "Not Significant"), col = c("red", "blue", "gray"), pch = 1)
+
+
+
+
+
+
+**Code Overview**
+
+This R script is used for analyzing gene expression data from a CSV file, performing statistical analyses, and visualizing the results using heatmaps and plots.
+
+**Detailed Breakdown**
+
+1. **Load Libraries and Data**
+
+library(gplots)
+
+url <- "https://raw.githubusercontent.com/HackBio-Internship/public\_datasets/main/Cancer2024/glioblastoma.csv"
+
+gene\_data <- read.csv(url, row.names = 1)
+
+1. **library(gplots)**: Loads the gplots package, which is used for creating heatmaps.
+1. **read.csv(url, row.names = 1)**: Reads a CSV file from the given URL into a data frame gene\_data, using the first column as row names.
+1. **Generate and Customize Heatmaps**
+
+heatmap.2(as.matrix(gene\_data), trace = 'none')
+
+1. **heatmap.2()**: Generates a heatmap of the gene expression data.
+1. **trace = 'none'**: Disables trace lines in the heatmap.
+
+heatmap.2(as.matrix(gene\_data), trace = 'none', scale='row', dendrogram = 'col', Colv = TRUE, Rowv = FALSE)
+
+1. **scale='row'**: Scales the data by row (normalizes each row).
+1. **dendrogram = 'col'**: Shows clustering dendrogram for columns only.
+1. **Colv = TRUE, Rowv = FALSE**: Clusters columns but not rows.
+
+heatmap.2(as.matrix(gene\_data), trace = 'none', scale='row', dendrogram = 'col', Colv = TRUE, Rowv = FALSE, col=hcl.colors(100, palette = 'blue-red'))
+
+1. **col=hcl.colors(100, palette = 'blue-red')**: Uses a blue-to-red color palette.
+
+heatmap.2(as.matrix(gene\_data), trace = 'none', scale='row', dendrogram = 'col', Colv = TRUE, Rowv = FALSE, col=hcl.colors(100, palette = 'green-yellow'))
+
+1. **col=hcl.colors(100, palette = 'green-yellow')**: Uses a green-to-yellow color palette.
+1. **Group Data and Calculate Statistics**
+
+group1 <- c(1,2,3,4,5)
+
+group2 <- c(6,7,8,9,10)
+
+group1\_data <- gene\_data[, group1]
+
+group2\_data <- gene\_data[, group2]
+
+group1\_mean <- rowMeans(group1\_data)
+
+group2\_mean <- rowMeans(group2\_data)
+
+1. **group1** and **group2**: Indices for dividing the data into two groups.
+1. **group1\_data** and **group2\_data**: Subset the data into two groups.
+1. **rowMeans()**: Calculates mean expression for each gene in both groups.
+
+fold\_change <- log2(group2\_mean) - log2(group1\_mean)
+
+1. **fold\_change**: Calculates the log2 fold change between the two groups.
+
+pvalues <- apply(gene\_data, 1, function(row) {
+
+`  `t.test(row[1:5], row[6:10])$p.value
+
+})
+
+1. **apply()**: Calculates p-values for each gene using a t-test between the two groups.
+1. **Visualize Fold Change and P-values**
+
+plot(fold\_change, -log10(pvalues))
+
+1. **plot()**: Creates a scatter plot of fold change vs. -log10 of p-values.
+1. **Set Cut-offs and Subset Data**
+
+fold\_change\_cutoff\_up <- log2(1.5)
+
+fold\_change\_cutoff\_down <- log2(0.67)
+
+pvalue\_cutoff <- 0.05
+
+1. **fold\_change\_cutoff\_up** and **fold\_change\_cutoff\_down**: Define thresholds for upregulated and downregulated genes.
+1. **pvalue\_cutoff**: Defines the threshold for statistical significance.
+
+upregulated\_genes <- gene\_data[fold\_change > fold\_change\_cutoff\_up & pvalues < pvalue\_cutoff, ]
+
+downregulated\_genes <- gene\_data[fold\_change < fold\_change\_cutoff\_down & pvalues < pvalue\_cutoff, ]
+
+1. **upregulated\_genes** and **downregulated\_genes**: Subset the data to include only genes meeting the criteria for upregulation or downregulation.
+1. **Output and Visualize Results**
+
+Copy code
+
+cat("Number of upregulated genes: ", nrow(upregulated\_genes), "\n")
+
+cat("Number of downregulated genes: ", nrow(downregulated\_genes), "\n")
+
+1. **cat()**: Prints the number of upregulated and downregulated genes.
+
+plot(fold\_change, -log10(pvalues), col = ifelse(fold\_change > fold\_change\_cutoff\_up & pvalues < pvalue\_cutoff, 'red', 
+
+`                                                `ifelse(fold\_change < fold\_change\_cutoff\_down & pvalues < pvalue\_cutoff, 'blue', 'gray')),
+
+`     `xlab = "Fold Change", ylab = "-log10(P-values)")
+
+legend("topright", legend = c("Upregulated", "Downregulated", "Not Significant"), col = c("red", "blue", "gray"), pch = 1)
+
+1. **plot()**: Visualizes the fold change and p-values with color coding for upregulated (red), downregulated (blue), and not significant (gray) genes.
+1. **legend()**: Adds a legend to the plot
+
+
