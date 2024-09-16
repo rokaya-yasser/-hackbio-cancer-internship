@@ -9,10 +9,36 @@ A glioblastoma gene expression dataset was analyzed using an R script for prepro
 **Research findings:**
 ### **Importance of Color Selection for Data Interpretation:**
 A diverging heatmap displays data around a critical midpoint (e.g., zero), showing positive and negative trends, while a sequential heatmap highlights data progressing in one direction, from minimum to maximum. Proper color choices enhance clarity: diverging heatmaps use contrasting colors (like blue-red) to show opposing trends, while sequential heatmaps use gradual color scales (e.g., white-blue) for continuous data interpretation.
+![Sequential Heatmpa](https://github.com/user-attachments/assets/427d3354-14e8-4fc3-98a5-53dcbdf410a2)
+
+Fig 1 Sequential Heatmap
+
+![Diverging Heatmap](https://github.com/user-attachments/assets/1dbb6e36-d1b6-48dd-8cd8-9879766abeac)
+
+Fig 2 Diverging heatmap
+
+![Genes Only](https://github.com/user-attachments/assets/3e50abc1-dda8-4fbb-adff-e051f951398a)
+
+Fig 3 Cluster of genes 
+
+![Samples Only](https://github.com/user-attachments/assets/d1c711c5-4a27-497d-8507-f8c50a5b9e50)
+
+Fig 4 Cluster of samples
+
+![Genes and Samples](https://github.com/user-attachments/assets/c9457584-e401-4dc6-9b14-88fe0395db43)
+
+Fig 5 Clusters of Genes and samples 
+
+
 
 **1-Top 3 Down-Regulated Gene:**
 
 The Top 3 Down-Regulated Gene Functions are anion Binding, arylamine N-acetyltransferase activity with p-values of 6.11E-07, 7.97E-06 and 7.97E-06 respectively. The top down-regulated gene functions suggest critical effects on ion balance, xenobiotic metabolism, and fatty acid oxidation. This down-regulation could have implications in various biological processes, including cellular signaling, detoxification, and energy metabolism.
+
+
+![Aspose Words 9227c33d-5700-4d0c-8026-8540b867fd27 004](https://github.com/user-attachments/assets/842e9f21-e550-4a04-97d9-29dcfb1c258a)
+
+Fig , Subset of genes using volcano plot
 
 <a name="_dyuw9vq7ypv7"></a>**2- Analysis of the Top 3 Enriched Pathways:**
 
@@ -45,10 +71,9 @@ The Top 3 Down-Regulated Gene Functions are anion Binding, arylamine N-acetyltra
    **FDR Significance (-log10(FDR))**: ~2.5
 
    **Details**: This pathway deals with the breakdown of fatty acids for energy. Dysregulation in this pathway may indicate metabolic disorders or changes in lipid homeostasis, contributing to disease conditions such as diabetes or obesity.
-
-   **Data Visualization:** 
-
-   <https://drive.google.com/drive/folders/1Y4Gr-avLXgy3qx2_MtwPZhE6a-UTQmtT>
+   
+![Enrichment analysis](https://github.com/user-attachments/assets/b12fc8b7-5308-4b25-b0c1-9692dfedd6d3)
+Fig , enrichment analysis 
 
 **Conclusion** 
 
