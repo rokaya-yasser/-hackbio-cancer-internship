@@ -43,6 +43,7 @@ Fig. 5: Clusters of genes and samples.
 **Task 3:** Subset of significantly upregulated and downregulated genes
 
 ![Aspose Words 9227c33d-5700-4d0c-8026-8540b867fd27 004](https://github.com/user-attachments/assets/842e9f21-e550-4a04-97d9-29dcfb1c258a)
+
 Fig. 6: Volcano plot of glioblastoma dataset
 
 **Task 4:** Functional enrichment analysis was carried out using ShinyGO, to identify biological pathways that are significantly overrepresented in the gene expression dataset.
