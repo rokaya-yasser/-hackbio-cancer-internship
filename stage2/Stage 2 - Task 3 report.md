@@ -1,8 +1,8 @@
-# **Differential Gene Expression Analysis of a Glioblastoma dataset** #
+# **Differential Gene Expression Analysis of a Glioblastoma dataset.** #
 
 **Authors (@slack):** Amaka Madubuike (@Ace_well), Nnadiekwe Chigozie (@Chigozie), Niguse Kelile Lema (@King), Owolabi Oluwatosin (@Oluwatosin), Raqeebat Rafiu (@Raqeebahh) and Rokaya Yasser (@Rokaya).
 
-**Link to code:** 
+**Link to code:** https://github.com/rokaya-yasser/-hackbio-cancer-internship/blob/main/stage2/Task%203%20(Stage%202)_Coding_and_Visualization.R
 
 **Link to dataset:** https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/glioblastoma.csv
 
@@ -58,11 +58,12 @@ Fig. 8: Bubble plot of top 5 enriched pathways.
 **Task 6:** Decription of the top 3 enriched pathways according to biological process.
 
 1. **Regulation of Biosynthetic and Cellular Biosynthetic Process** (GO:0031326) controls the synthesis of macromolecules crucial for cell growth. In glioblastoma, dysregulation of this process promotes rapid tumor proliferation and survival by enhancing lipid, protein, and nucleotide biosynthesis, driven by pathways like mTOR and MYC ( Masui _et al._, 2019).
+
 2. **Transcription by RNA Polymerase II (GO:0006366):** This pathway focuses on the process by which RNA Polymerase II transcribes DNA into messenger RNA (mRNA), a crucial step in gene expression. RNA Polymerase II-mediated transcription is critical for regulating genes involved in cell cycle control, apoptosis, and DNA repair. Aberrant transcriptional control in glioblastoma is often driven by genetic and epigenetic changes, such as mutations in transcription factors or histone modifications, leading to the unchecked growth of tumor cells (Bhat et al., 2019).
    
 ## **Conclusion** ## 
 
-In conclusion, the analysis of glioblastoma gene expression data using R scripts effectively identified significant gene expression patterns. Customized heatmaps and scatter plots highlighted up- and down-regulated genes based on fold change and statistical significance, providing valuable insights into the gene expression profiles relevant to the condition.
+In conclusion, this analysis reveals significant dysregulation in key biological processes that underpin glioblastoma's aggressive nature. These insights provide a foundation for future studies aimed at targeting these pathways to improve therapeutic outcomes for patients with glioblastoma.
 
 ## **References:** ##
 
