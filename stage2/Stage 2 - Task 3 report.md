@@ -60,7 +60,7 @@ Fig. 8: Bubble plot of top 5 enriched pathways.
 
 1. **Regulation of Biosynthetic and Cellular Biosynthetic Process** (GO:0031326) controls the synthesis of macromolecules crucial for cell growth. In glioblastoma, dysregulation of this process promotes rapid tumor proliferation and survival by enhancing lipid, protein, and nucleotide biosynthesis, driven by pathways like mTOR and MYC ( Masui _et al._, 2019).
 
-2. **Transcription by RNA Polymerase II (GO:0006366):** This pathway focuses on the process by which RNA Polymerase II transcribes DNA into messenger RNA (mRNA), a crucial step in gene expression. RNA Polymerase II-mediated transcription is critical for regulating genes involved in cell cycle control, apoptosis, and DNA repair. Aberrant transcriptional control in glioblastoma is often driven by genetic and epigenetic changes, such as mutations in transcription factors or histone modifications, leading to the unchecked growth of tumor cells.
+2. **Transcription by RNA Polymerase II (GO:0006366):** This pathway focuses on the process by which RNA Polymerase II transcribes DNA into messenger RNA (mRNA), a crucial step in gene expression. RNA Polymerase II-mediated transcription is critical for regulating genes involved in cell cycle control, apoptosis, and DNA repair. Aberrant transcriptional control in glioblastoma is often driven by genetic and epigenetic changes, such as mutations in transcription factors or histone modifications, leading to the unchecked growth of tumor cells(Cramer, 2019).
    
 ## **Conclusion** ## 
 
@@ -68,5 +68,6 @@ In conclusion, this analysis reveals significant dysregulation in key biological
 
 ## **References:** ##
 
-1- Masui K, Harachi M, Ikegami S, Yang H, Onizuka H, Yong WH, Cloughesy TF, Muragaki Y, Kawamata T, Arai N, Komori T, Cavenee WK, Mischel PS, Shibata N. mTORC2 links growth factor signaling with epigenetic regulation of iron metabolism in glioblastoma. Journal of Biological Chemistry, 2019 Dec 20; 294(51): 19740-19751. doi: 10.1074/jbc.RA119.011519. PMCID: PMC6926466.
+1- Masui K, Harachi M, Ikegami S, Yang H, Onizuka H, Yong WH, Cloughesy TF, Muragaki Y, Kawamata T, Arai N, Komori T, Cavenee WK, Mischel PS, Shibata N. mTORC2 links growth factor signaling with epigenetic regulation of iron metabolism in glioblastoma. Journal of Biological Chemistry, 2019 Dec 20; 294(51): 19740-19751. doi: 10.1074/jbc.RA119.011519.
+
 2- Cramer, P. Organization and regulation of gene transcription. Nature 573, 45–54 (2019). https://doi.org/10.1038/s41586-019-1517-4
