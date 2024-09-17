@@ -60,7 +60,7 @@ Fig. 8: Bubble plot of top 5 enriched pathways.
 
 1. **Regulation of Biosynthetic and Cellular Biosynthetic Process** (GO:0031326) controls the synthesis of macromolecules crucial for cell growth. In glioblastoma, dysregulation of this process promotes rapid tumor proliferation and survival by enhancing lipid, protein, and nucleotide biosynthesis, driven by pathways like mTOR and MYC ( Masui _et al._, 2019).
 
-2. **Transcription by RNA Polymerase II (GO:0006366):** This pathway focuses on the process by which RNA Polymerase II transcribes DNA into messenger RNA (mRNA), a crucial step in gene expression. RNA Polymerase II-mediated transcription is critical for regulating genes involved in cell cycle control, apoptosis, and DNA repair. Aberrant transcriptional control in glioblastoma is often driven by genetic and epigenetic changes, such as mutations in transcription factors or histone modifications, leading to the unchecked growth of tumor cells (Bhat et al., 2019).
+2. **Transcription by RNA Polymerase II (GO:0006366):** This pathway focuses on the process by which RNA Polymerase II transcribes DNA into messenger RNA (mRNA), a crucial step in gene expression. RNA Polymerase II-mediated transcription is critical for regulating genes involved in cell cycle control, apoptosis, and DNA repair. Aberrant transcriptional control in glioblastoma is often driven by genetic and epigenetic changes, such as mutations in transcription factors or histone modifications, leading to the unchecked growth of tumor cells.
    
 ## **Conclusion** ## 
 
