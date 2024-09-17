@@ -56,7 +56,7 @@ Fig. 7: Result of functional enrichment analysis.
 ![top_5_enriched_pathways_720](https://github.com/user-attachments/assets/78eeb257-d4d2-4a36-acc1-3ca49c82de68)
 Fig. 8: Bubble plot of top 5 enriched pathways.
 
-**Task 6:** Decription of the top 3 enriched pathways according to biological process.
+**Task 6:** Description of the top 3 enriched pathways according to biological process.
 
 1. **Regulation of Biosynthetic and Cellular Biosynthetic Process** (GO:0031326) controls the synthesis of macromolecules crucial for cell growth. In glioblastoma, dysregulation of this process promotes rapid tumor proliferation and survival by enhancing lipid, protein, and nucleotide biosynthesis, driven by pathways like mTOR and MYC ( Masui _et al._, 2019).
 
