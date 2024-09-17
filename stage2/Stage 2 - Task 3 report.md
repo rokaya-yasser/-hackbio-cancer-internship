@@ -1,6 +1,6 @@
 # **Differential Gene Expression Analysis of a Glioblastoma dataset** #
 
-**Authors:** Amaka Madubuike, Nnadiekwe Chigozie, Niguse Kelile Lema, Owolabi Oluwatosin, Raqeebat Rafiu and Rokaya Yasser.
+**Authors (@slack):** Amaka Madubuike (@Ace_well), Nnadiekwe Chigozie (@Chigozie), Niguse Kelile Lema (@King), Owolabi Oluwatosin (@Oluwatosin), Raqeebat Rafiu (@Raqeebahh) and Rokaya Yasser (@Rokaya).
 
 **Link to code:** 
 
@@ -43,72 +43,28 @@ Fig. 5: Clusters of genes and samples.
 **Task 3:** Subset of significantly upregulated and downregulated genes
 
 ![Aspose Words 9227c33d-5700-4d0c-8026-8540b867fd27 004](https://github.com/user-attachments/assets/842e9f21-e550-4a04-97d9-29dcfb1c258a)
-Fig. 6: Volcano plot of glioblastoma dataset.
+Fig. 6: Volcano plot of glioblastoma dataset
 
 **Task 4:** Functional enrichment analysis was carried out using ShinyGO, to identify biological pathways that are significantly overrepresented in the gene expression dataset.
 
 ![enrichment_biological_processes](https://github.com/user-attachments/assets/ee7f2312-6a11-410b-8684-1ad297fdbc29)
 Fig. 7: Result of functional enrichment analysis.
 
-**Task 5:** A straightforward visualization (bubble plot) was created using the top 5 enriched pathways, which displays the number of genes associated with each pathway
+**Task 5:** A straightforward visualization (bubble plot) which displays the number of genes associated with each pathway was created using the downregulated genes. The top 5 enriched pathways were then identified.
 
 ![top_5_enriched_pathways_720](https://github.com/user-attachments/assets/78eeb257-d4d2-4a36-acc1-3ca49c82de68)
 Fig. 8: Bubble plot of top 5 enriched pathways.
 
-**Task 6:** Decription of the top 3 enriched pathways.
+**Task 6:** Decription of the top 3 enriched pathways according to biological process.
 
-**1-Top 3 Down-Regulated Gene:**
-
-The Top 3 Down-Regulated Gene Functions are anion Binding, arylamine N-acetyltransferase activity with p-values of 6.11E-07, 7.97E-06 and 7.97E-06 respectively. The top down-regulated gene functions suggest critical effects on ion balance, xenobiotic metabolism, and fatty acid oxidation. This down-regulation could have implications in various biological processes, including cellular signaling, detoxification, and energy metabolism.
-
-
-
-
-<a name="_dyuw9vq7ypv7"></a>**2- Analysis of the Top 3 Enriched Pathways:**
-
-1. **Propanoate metabolism (hsa00640)**
-
-   **Fold Enrichment**: ~45
-
-   **Number of Genes**: 5
-
-   **FDR Significance (-log10(FDR))**: ~2.5
-
-   **Details**: This pathway involves the metabolism of propanoate, an important intermediate in the breakdown of amino acids and fatty acids. The high fold enrichment suggests that this pathway plays a crucial role in the studied condition, possibly indicating altered energy or lipid metabolism.
-
-1. **Butanoate metabolism (hsa00650)**
-
-**Fold Enrichment**: ~40
-
-**Number of Genes**: 5
-
-**FDR Significance (-log10(FDR))**: ~2.5
-
-**Details**: Butanoate (butyrate) metabolism is vital for cellular energy production, especially in the colon, where it serves as a major energy source for colonocytes. The strong enrichment may suggest an alteration in gut health or energy production.
-
-1. **Fatty acid degradation (hsa00071)**
-
-   **Fold Enrichment**:** ~35
-
-   **Number of Genes**: 4
-
-   **FDR Significance (-log10(FDR))**: ~2.5
-
-   **Details**: This pathway deals with the breakdown of fatty acids for energy. Dysregulation in this pathway may indicate metabolic disorders or changes in lipid homeostasis, contributing to disease conditions such as diabetes or obesity.
+1. **Regulation of Biosynthetic and Cellular Biosynthetic Process** (GO:0031326) controls the synthesis of macromolecules crucial for cell growth. In glioblastoma, dysregulation of this process promotes rapid tumor proliferation and survival by enhancing lipid, protein, and nucleotide biosynthesis, driven by pathways like mTOR and MYC ( Masui _et al._, 2019).
+2. **Transcription by RNA Polymerase II (GO:0006366):** This pathway focuses on the process by which RNA Polymerase II transcribes DNA into messenger RNA (mRNA), a crucial step in gene expression. RNA Polymerase II-mediated transcription is critical for regulating genes involved in cell cycle control, apoptosis, and DNA repair. Aberrant transcriptional control in glioblastoma is often driven by genetic and epigenetic changes, such as mutations in transcription factors or histone modifications, leading to the unchecked growth of tumor cells (Bhat et al., 2019).
    
-![Enrichment analysis](https://github.com/user-attachments/assets/b12fc8b7-5308-4b25-b0c1-9692dfedd6d3)
-Fig , enrichment analysis 
-
-**Conclusion** 
+## **Conclusion** ## 
 
 In conclusion, the analysis of glioblastoma gene expression data using R scripts effectively identified significant gene expression patterns. Customized heatmaps and scatter plots highlighted up- and down-regulated genes based on fold change and statistical significance, providing valuable insights into the gene expression profiles relevant to the condition.
 
-**References:**
+## **References:** ##
 
-Chen, HH., Tseng, Y., Wang, SY. et al. The metabolome profiling and pathway analysis in metabolic healthy and abnormal obesity. Int J Obes 39, 1241–1248 (2015). <https://doi.org/10.1038/ijo.2015.65>
-
-Wang, D., Guo, S., He, H., Gong, L., & Cui, H. (2020). Gut microbiome and serum metabolome analyses identify unsaturated fatty acids and butanoate metabolism induced by gut microbiota in patients with chronic spontaneous urticaria. *Frontiers in Cellular and Infection Microbiology*, *10*. <https://doi.org/10.3389/fcimb.2020.00024>
-
-Goepfert, S., & Poirier, Y. (2007). Β-oxidation in fatty acid degradation and beyond. *Current Opinion in Plant Biology*, *10*(3), 245–251. <https://doi.org/10.1016/j.pbi.2007.04.007>
-
+Masui K, Harachi M, Ikegami S, Yang H, Onizuka H, Yong WH, Cloughesy TF, Muragaki Y, Kawamata T, Arai N, Komori T, Cavenee WK, Mischel PS, Shibata N. mTORC2 links growth factor signaling with epigenetic regulation of iron metabolism in glioblastoma. Journal of Biological Chemistry, 2019 Dec 20; 294(51): 19740-19751. doi: 10.1074/jbc.RA119.011519. PMCID: PMC6926466.
 
