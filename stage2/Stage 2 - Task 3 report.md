@@ -69,4 +69,4 @@ In conclusion, this analysis reveals significant dysregulation in key biological
 ## **References:** ##
 
 Masui K, Harachi M, Ikegami S, Yang H, Onizuka H, Yong WH, Cloughesy TF, Muragaki Y, Kawamata T, Arai N, Komori T, Cavenee WK, Mischel PS, Shibata N. mTORC2 links growth factor signaling with epigenetic regulation of iron metabolism in glioblastoma. Journal of Biological Chemistry, 2019 Dec 20; 294(51): 19740-19751. doi: 10.1074/jbc.RA119.011519. PMCID: PMC6926466.
-
+Cramer, P. Organization and regulation of gene transcription. Nature 573, 45–54 (2019). https://doi.org/10.1038/s41586-019-1517-4
