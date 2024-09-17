@@ -5,7 +5,6 @@
 # setwd("C:/Users/nigus/Documents/HackBio")
 # getwd()
 
-
 # enable libraries
 library(gplots)
 library(pheatmap)
@@ -63,8 +62,7 @@ heatmap.2(as.matrix(data_log),
           main = "Genes and Samples")
 
 
-
-# 5. Subset significantly upregulated/downregulated genes
+# Subset significantly upregulated/downregulated genes
 # Define cutoff values for fold change and p-value
 fold_change_cutoff <- 1.5   # Log2 Fold Change cutoff
 p_value_cutoff <- 0.05      # P-value cutoff
@@ -121,3 +119,42 @@ heatmap.2(as.matrix(downregulated_data_log),
           xlab = "Samples", 
           ylab = "Genes")
 
+# Load the CSV file
+enrichment_data <- read.csv("C:/Users/nigus/Documents/HackBio/data/enrichment_biological_processes.csv")
+
+# View the first few rows
+head(enrichment_data)
+
+# Sort the data by the FDR (ascending order)
+enrichment_data_sorted <- enrichment_data[order(enrichment_data$Enrichment.FDR), ]
+
+# Select the top 5 pathways
+top5_pathways <- enrichment_data_sorted[1:5, ]
+
+# Select the top 3 pathways
+top3_pathways <- enrichment_data_sorted[1:3, ]
+
+# Extract the genes from the top 5 pathways
+top5_genes <- top5_pathways$Genes
+
+# Extract the genes from the top 3 pathways
+top3_genes <- top3_pathways$Genes
+
+# Assuming enrichment_data_sorted has the top pathways already sorted by FDR
+top5_pathways <- enrichment_data_sorted[1:5, ]
+
+# Calculate the negative log10 of the FDR for each pathway
+top5_pathways$neg_log10_FDR <- -log10(top5_pathways$Enrichment.FDR)
+
+
+# Create a bubble plot
+ggplot(top5_pathways, aes(x=reorder(Pathway, neg_log10_FDR), y=neg_log10_FDR)) +
+  geom_point(aes(size=nGenes, color=neg_log10_FDR)) +
+  scale_color_gradient(low="blue", high="red") +
+  labs(title="Top 5 Enriched Pathways",
+       x="Pathway",
+       y="-log10(FDR)",
+       size="Number of Genes",
+       color="-log10(FDR)") +
+  theme_minimal() +
+  coord_flip()
