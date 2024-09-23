@@ -9,6 +9,7 @@ Objective:
 The objective of this project is to analyze the NHANES dataset by handling missing data, visualizing key health metrics (BMI, weight, weight in pounds, and age), and exploring statistical measures such as the mean pulse rate, diastolic blood pressure range, and income variance and investigate the relationship between weight and height, stratified by gender, diabetes status, and smoking habits, and to conduct t-tests to examine potential associations between variables like age and gender, BMI and diabetes.
 
 Visualization the distribution of BMI, Weight, Weight in pounds:
+![Histograms](https://github.com/user-attachments/assets/dba2b9ce-5b28-4444-aa64-2d845cc0ef69)
 
 
 Fig 1, Four histograms representing different distributions of a dataset.
@@ -16,27 +17,23 @@ Fig 1, Four histograms representing different distributions of a dataset.
 Observations: 
 
 BMI Distribution:
-
 Most of the individuals have a BMI between 15 and 40, with a peak around 20–30, indicating that most people in the dataset have a BMI in the normal to overweight range.
 
 Weight Distribution:
-
 The highest concentration of individuals weighs between 50 to 100 kilograms, with fewer people weighing above or below this range.
 
 Weight in Pounds Distribution:
-
 Like the weight distribution in kilograms, most people weigh between 100 and 200 pounds, with some outliers.
 
 Age Distribution: 
-
 There is a relatively even spread of individuals from ages 20 to 80, though the number of individuals in each age group fluctuates slightly across the graph.
 
 Each histogram gives insight into the distribution of a particular variable in the dataset, allowing for easy comparison of frequencies across ranges
 
-.
 
 Visualization of the relationship between weight and height 
 
+![Visualization](https://github.com/user-attachments/assets/940f871b-ff51-4d10-acfe-d808835a3ed5)
 
 
 
