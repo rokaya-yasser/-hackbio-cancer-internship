@@ -24,7 +24,7 @@ The TCGA-BRCA dataset contains RNA-Seq data from 'Primary Tumor' and 'Solid Tiss
  The preprocessing involved:
 - Normalization using TCGAanalyze_normalization() to account for gene length differences.
 - Filtration using TCGAanalyze_Filtering() to remove low-expression genes under the 25th percentile to reduce noise.(2)(3)
- 
+ file:///C:/Users/somart/Downloads/stage%203/heatmap.jpg
 Figure 1: Heatmap of filtered dataset (low to high gene expression).
 3. Methodology for Biomarker Discovery and Machine Learning
 3.1 Differential Expression Analysis
