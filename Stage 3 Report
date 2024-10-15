@@ -1,0 +1,61 @@
+Stage 03 Task
+HackBio Internship: Cancers
+ 
+Title
+Identifying Potential Biomarkers in Breast Cancer Using Differential Expression and Machine Learning Approaches
+Authors
+Favour Igwezeke1, Jessica ovabor2, Anarghya Hegde3, Oluwatobiloba Johnson Osedimilehin4, Ogochukwu Nwaigwe5, Muhammad Faizan Khan6, Rokaya Yasser7, Muhammad Faheem Raziq8.
+ 
+Contributors Information
+Authors	Slack ID	Email
+1	@Favour	beingfave@gmail.com
+	@Jessica.solving.Cancer	ovaborjessica85@gmail.com
+3	@AnuHegde	anarghyahegde@outlook.com
+4	@Tobijayyy	tobijohnson01@gmail.com
+5	@OGO	nwaigweogochukwu756@gmail.com
+6	@FAIZAN	faizanjeee@hotmail.com
+7	@Rokaya	rokayayasser727@gmail.com
+8	@MFR-10	faheemraziq1999@gmail.com
+1. Introduction
+Breast cancer is one of the most prevalent cancers worldwide, and the discovery of potential biomarkers can aid in early diagnosis and treatment. Using the TCGA-BRCA dataset, which contains gene expression data from breast cancer patients, this report presents a comprehensive analysis focusing on differential gene expression and machine learning for biomarker discovery.
+2. Description of the Dataset and Preprocessing
+The TCGA-BRCA dataset contains RNA-Seq data from 'Primary Tumor' and 'Solid Tissue Normal' samples. Twenty samples from each category were retrieved and stored in a gene expression count matrix for further analysis.(1)
+ The preprocessing involved:
+- Normalization using TCGAanalyze_normalization() to account for gene length differences.
+- Filtration using TCGAanalyze_Filtering() to remove low-expression genes under the 25th percentile to reduce noise.(2)(3)
+
+
+Figure 1: Heatmap of filtered dataset (low to high gene expression).
+3. Methodology for Biomarker Discovery and Machine Learning
+3.1 Differential Expression Analysis
+Using EdgeR, the differential expression of genes was assessed between normal and tumor tissues. A total of 3462 genes met the set criteria (log2 fold change ≥ 6, FDR ≤ 0.01). Of these, 98 were overregulated, and 129 were underregulated.
+ 
+Figure 2: Volcano plot showing differentially expressed genes.
+3.2 Machine Learning Approach
+Gene expression data was reshaped for machine learning, with the Random Forest algorithm chosen for classification. Data was split into training (70%) and test (30%) sets. Dimensionality reduction was performed using Principal Component Analysis (PCA) to address the high-dimensional nature of the dataset. The Random Forest model trained with 500 trees showed high performance on the test set.
+ 
+Figure 3: Confusion matrix for Random Forest classification.
+4. Results and Interpretation
+4.1 Identified Biomarkers
+The analysis revealed several significant biomarkers:
+- Top upregulated genes: CST5 (Fold Change: 10.15), CGA (Fold Change: 9.84), and CLEC3A (Fold Change: 9.39).
+- Top downregulated genes: MYL (Fold Change: -14.13), XIRP2 (Fold Change: -13.24), and MYH (Fold Change: -13.16).
+ 
+Figures 4: Upregulated genes enriched pathways.
+ 
+Figure 5: Downregulated genes enriched pathways.
+4.2 Model Performance
+The Random Forest model achieved 100% accuracy, with perfect sensitivity, specificity, and Kappa statistics of 1. Cross-validation confirmed the model's robustness with a mean accuracy of 96.67%.
+ 
+Figure 6: Random Forest model
+6. Conclusion and Future Directions
+This study successfully identified potential biomarkers like CST5 and MYL in breast cancer using differential expression analysis and machine learning. The Random Forest model demonstrated strong predictive performance, suggesting these biomarkers may hold clinical value.
+Future Directions:
+- Validation of findings in larger cohorts.
+- Application of this methodology to other cancer subtypes.
+- Integration with clinical data to enhance predictive power.
+7. Reference
+1.	Colaprico, A., Silva, T. C., Olsen, C., Garofano, L., Cava, C., Garolini, D., ... & Noushmehr, H. (2016). TCGAbiolinks: an R/Bioconductor package for integrative analysis of TCGA data. Nucleic acids research, 44(8).
+2.	Wickham, H., François, R., Henry, L., Müller, K., & Vaughan, D. (2023). dplyr: a grammar of data manipulation. R package version 1.1. 2. Computer software.
+3.	Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D. A., François, & Yutani, H. (2019). Welcome to the Tidyverse. Journal of open source software, 4(43).
+
