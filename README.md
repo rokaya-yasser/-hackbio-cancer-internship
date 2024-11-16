@@ -10,10 +10,9 @@ All of the work and projects done during the HackBio Bioinformatics Internship p
 
 Fundamental technical writing abilities, concentrating on communicating intricate scientific ideas in an understandable and succinct manner. 
 
-**Subsequent Stages:**
-The repository will be updated with subsequent stages of the internship as they are completed. 
+**Stage 1: Comparative Analysis of Differentially Expressed Genes Across Cancers**
 
-Below is a brief overview of what to expect:
+Gene expression profiles across 12 distinct cancer types, uncovering varying degrees of overlap among differentially expressed genes.
 
 **Stage 2: Coding and Visualization**
 
